@@ -62,10 +62,9 @@ def turn(board)
   index = input_to_index(index)
   if valid_move?(board, index)
     move(board, index, current_player)
-
+    display_board(board)
   else
     puts "Please enter 1-9:"
     turn(board)
 end
-display_board(board)
 end
