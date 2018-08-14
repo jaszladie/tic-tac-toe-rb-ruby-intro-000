@@ -55,3 +55,16 @@ else
   return "O"
 end
 end
+
+def turn(board)
+  puts "Please enter 1-9:"
+  answer = gets.chomp
+  answer = input_to_index(answer)
+  if valid_move?(board, answer)
+    move(board, answer)
+    puts display_board(board)
+  else
+    puts "Please enter 1-9:"
+    turn(board)
+end
+end
